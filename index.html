@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex items-center justify-center bg-[#8d99ae] pt-10">
+    <main class="bg-white rounded-[30px] h-max min-h-[300px] w-[350px] shadow hover:shadow-xl box-border p-[30px] flex flex-col ">
+      <form class="rounded-full border-2 flex justify-around">
+        <input type="text" id="name" autocomplete="off"  class="bg-transparent rounded-none border-0 input-focus"/>
+        <button >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <section class="result flex flex-col items-center">
+        <figure class="name flex gap-0 mt-4 text-xl font-bold items-center flex-col">
+          <figcaption>London</figcaption>
+          <p class="text-[12px] font-light">(<span class="region">ali</span>)</p>
+        </figure>
+
+        <figure class="temperature flex items-center flex-col ">
+          <img src="https://openweathermap.org/img/wn/10d@4x.png" />
+          <figcaption class="text-5xl font-semibold flex items-center ml-[26px]">
+            <span>31</span>
+            <sup>o</sup>
+          </figcaption>
+        </figure>
+        <p class="description ">overcast clouds</p>
+        <ul class="grid grid-cols-3 gap-2 mt-8">
+          <li class="rounded-lg bg-[#EC7A09] text-md text-white font-semibold flex flex-col items-center justify-evenly p-4 gap-4 hover:shadow-2xl hover:translate-y-1">
+            <span>clouds</span>
+            <i class="fa-solid fa-cloud"></i>
+            <p><span id="clouds">98</span> %</p>
+          </li>
+          <li class="rounded-lg bg-[#0a9396] text-md text-white font-semibold flex flex-col items-center justify-evenly p-4 gap-4 hover:shadow-2xl hover:translate-y-1">
+            <span>humidity</span>
+            <i class="fa-solid fa-droplet "></i>
+            <p><span id="humidity">98%</span> %</p>
+          </li>
+          <li class="rounded-lg bg-[#1d3557] text-md text-white font-semibold flex flex-col items-center justify-evenly py-4 px-2 gap-4 hover:shadow-2xl hover:translate-y-1">
+            <span>pressure</span>
+            <i class="fa-solid fa-gauge"></i>
+            <p><span id="pressure">1011</span><span class="text-[12px] "> mb</span></p>
+          </li>
+          <li class="rounded-lg bg-[#b56576] text-md text-white font-semibold flex flex-col items-center justify-evenly p-4 gap-4 hover:shadow-2xl hover:translate-y-1">
+            <span>wind</span>
+            <i class="fa-solid fa-wind"></i>
+            <p><span id="wind">1011</span><span class="text-[12px] "> kph</span></p>
+          </li>
+          <li class="rounded-lg bg-[#bc4b51] text-md text-white font-semibold flex flex-col items-center justify-evenly p-4 gap-4  ease-out hover:shadow-2xl hover:translate-y-1 ">
+            <span>head</span>
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <p><span id="heat">1011</span><span class="text-[12px] "> <sup>o</sup></span></p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  </body>
+</html>

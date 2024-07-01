@@ -1,0 +1,8 @@
+
+.shadow-li{
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    )
+}
